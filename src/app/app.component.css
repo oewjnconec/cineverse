@@ -1,0 +1,22 @@
+.layout{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+app-sidebar{
+    width: 30vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+
+    align-self: center;
+}
+.contenido{
+    margin-left: 36vh;
+    padding: 2rem;
+    height: auto;
+    overflow-y: auto;
+}

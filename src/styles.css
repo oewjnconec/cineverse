@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --sl-font-sans: 'Roboto', sans-serif;
+    --color-surface: #3b4449;   /* tarjetas, inputs */
+    --color-accent: #4fc3f7;    /* botones, links */
+    --color-text: #e0e0e0;      /* texto principal */
+    --color-muted: #a0a0a0;     /* texto secundario */
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+        font-family: var(--sl-font-sans);
+        background-color: #0B192C;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,34 @@
+<div class="contenedor">
+  <div class="titulo">
+    <h1>Catálogo</h1>
+  </div>
+  <div class="cont-peliculas">
+    <div class="movie-card" *ngFor="let peli of peliculas">
+      <div class="mask">
+        <img class="movie-img" [src]="peli.portada" alt="{{ peli.titulo }}" />
+        <div class="overlay">
+          <h3>{{ peli.titulo }}</h3>
+          <p>{{ peli.anio }}</p>
+          <div class="acciones">
+            <button class="boton boton-fav"
+            matTooltip="Info about the action">
+              <span
+                class="material-symbols-outlined icono"
+                style="font-variation-settings: 'wght' 300; font-size: 28px">
+                favorite_border
+              </span>
+              
+            </button>
+            <button class="boton-verdespues">
+              <span
+                class="material-symbols-outlined icono"
+                style="font-variation-settings: 'wght' 300; font-size: 28px">
+                access_time
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
