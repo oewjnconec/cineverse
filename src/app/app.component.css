@@ -20,3 +20,22 @@ app-sidebar{
     height: auto;
     overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+    .layout{
+        flex-direction: column;
+    }
+
+      app-sidebar {
+    width: 100%;
+    height: 60px; /* tipo barra superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contenido {
+    margin-left: 0; /* quitar desplazamiento */
+    padding: 1rem;
+  }
+}
