@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
       this.peliculas = response.results.map((movie: any) => ({
         titulo: movie.title,
         anio: movie.release_date ? movie.release_date.split('-')[0] : '',
-        portada: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+        portada: `https://image.tmdb.org/t/p/w1280${movie.poster_path}`,
         descripcion: movie.overview,
       }));
     });

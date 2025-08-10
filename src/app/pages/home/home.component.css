@@ -1,114 +1,172 @@
 .titulo {
-    color: #cdcdcd;
-    width: 100%;
-    margin: 0 auto 1rem 4rem;
+  color: #cdcdcd;
+  width: 100%;
+  margin: 0 auto 1rem 4rem;
 }
 .titulo h1 {
-    font-size: 30px;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    font-weight: 500;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-weight: 500;
 }
 
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    animation: fadeUp 1.5s ease forwards;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeUp 1.5s ease forwards;
 }
 
 .peliculas-padre {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 4rem;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 4rem;
+  box-sizing: border-box;
 }
 
 .movie-card {
-    position: relative;
-    height: 330px;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    cursor: pointer;
-    background: #fff;
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: #fff;
 }
 
 .movie-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    transition: opacity 0.4s ease;
-    padding-bottom: 10px;
-    color: #e0e0e0;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition: opacity 0.4s ease;
+  padding-bottom: 10px;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .movie-card:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .overlay h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 400;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
 }
 .overlay p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
 }
 
 .acciones {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-button{
-    width: 40%; height: 30px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    padding: 0;
-    margin: 0;
-    background-color: #ffffff6c;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+button {
+  width: 40%;
+  height: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff6c;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.boton-verdespues:hover{
-    background-image: linear-gradient(to right, #1FA2FF 0%, #167cc5  100%);
-    color: aliceblue;
+.boton-verdespues:hover {
+  background-image: linear-gradient(to right, #1fa2ff 0%, #167cc5 100%);
+  color: aliceblue;
 }
 
-.boton-fav:hover{
-    background-image: linear-gradient(to right, #e52d27 0%, #b31217  100%);
-    color: aliceblue;
+.boton-fav:hover {
+  background-image: linear-gradient(to right, #e52d27 0%, #b31217 100%);
+  color: aliceblue;
 }
 
+/* Imagen con bordes redondeados y sombra */
+.carousel-inner img {
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 700px;
+}
+
+/* Caption más moderno */
+.carousel-caption {
+  border-radius: 12px;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent) !important;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+/* Títulos más destacados */
+.carousel-caption h5 {
+  font-size: 3rem;
+  font-family: "DM Sans", serif;
+  color: #ffffff86;
+  width: 600px;
+  text-align: left;
+  margin: 1rem;
+transform: translateY(40%);
+}
+
+/* Flechas personalizadas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100%;
+  padding: 10px;
+  height: 700px;
+}
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+  width: 50px;
+  justify-self: center;
+}
+
+.carousel {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
