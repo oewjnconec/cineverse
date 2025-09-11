@@ -17,7 +17,7 @@
       *ngFor="let peli of peliculas; let i = index"
       [class.active]="i === 0"
     >
-      <img [src]="peli.portada" class="" [alt]="peli.titulo" />
+      <img [src]="peli.banner" class="" [alt]="peli.titulo" />
       <div class="carousel-caption">
         <h5>{{ peli.titulo }}</h5>
       </div>
@@ -38,7 +38,7 @@
   <div class="peliculas-padre">
     <div class="movie-card" *ngFor="let peli of peliculas">
       <div class="mask">
-        <img class="movie-img" [src]="peli.portada" alt="{{ peli.titulo }}" />
+        <img class="movie-img" [src]="peli.poster" alt="{{ peli.titulo }}" />
         <div class="overlay">
           <h3>{{ peli.titulo }}</h3>
           <p>{{ peli.anio }}</p>

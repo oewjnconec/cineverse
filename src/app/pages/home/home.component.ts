@@ -16,14 +16,9 @@ export class HomeComponent implements OnInit {
 
   peliculas: any[] = [];
 
-  ngOnInit(): void {
-    this.apiService.getPopularMovies().subscribe((response) => {
-      this.peliculas = response.results.map((movie: any) => ({
-        titulo: movie.title,
-        anio: movie.release_date ? movie.release_date.split('-')[0] : '',
-        portada: `https://image.tmdb.org/t/p/w1280${movie.poster_path}`,
-        descripcion: movie.overview,
-      }));
-    });
-  }
+ngOnInit() {
+  this.apiService.getPopularMovies().subscribe(data => {
+    this.peliculas = data;
+  });
+}
 }
